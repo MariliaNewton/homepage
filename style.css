@@ -1,0 +1,290 @@
+/* playfair-display-400 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/playfair-display-v37-latin-regular.woff2")
+    format("woff2");
+}
+/* playfair-display-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/playfair-display-v37-latin-500.woff2")
+    format("woff2");
+}
+/* playfair-display-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/playfair-display-v37-latin-600.woff2")
+    format("woff2");
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/playfair-display-v37-latin-700.woff2")
+    format("woff2");
+}
+/* playfair-display-800 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/fonts/playfair-display-v37-latin-800.woff2")
+    format("woff2");
+}
+/* playfair-display-900 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/playfair-display-v37-latin-900.woff2")
+    format("woff2");
+}
+/* lato-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/lato-v24-latin-300.woff2") format("woff2");
+}
+/* lato-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/lato-v24-latin-regular.woff2") format("woff2");
+}
+
+:root {
+  --shadow-mountain: #595959;
+  --platinum-granite: #7f7f7f;
+  --cerebral-grey: #cccccc;
+  --bleached-silk: #f2f2f2;
+  --black: #000;
+  --white: #fff;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Lato", serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* HEADER */
+
+body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 45rem;
+  background-color: var(--platinum-granite);
+  transform-origin: 0;
+  transform: skewY(-10deg);
+  box-shadow: 0rem 0.1rem 1rem var(--shadow-mountain);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.photo-container {
+  position: relative;
+}
+
+.photo-container img {
+  height: 45rem;
+  transform: rotateZ(180deg);
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.1rem 1rem var(--shadow-mountain);
+}
+
+.photo-container img:hover + .homepage-name,
+.homepage-name:hover {
+  transition: color 300ms ease-in-out;
+  color: var(--white);
+}
+
+.homepage-name {
+  transition: color 300ms ease-in-out;
+  position: absolute;
+  color: var(--cerebral-grey);
+  bottom: 0;
+  font-size: 3.5rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+}
+
+.about-me-container {
+  background-color: var(--bleached-silk);
+  padding: 1rem;
+  max-width: 50rem;
+  box-shadow: 0rem 0.1rem 1rem var(--shadow-mountain);
+}
+
+.about-me-container h1 {
+  font-family: "Playfair Display";
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.about-me-container p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: var(--shadow-mountain);
+}
+
+.about-me-container footer {
+  display: flex;
+  justify-content: end;
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+.about-me-container svg {
+  height: 2rem;
+}
+
+/* MAIN */
+
+main h1 {
+  font-family: "Playfair Display";
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+main {
+  padding: 5rem;
+  max-width: 100rem;
+  margin: auto;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+}
+/* .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+} */
+
+.card img {
+  object-fit: cover;
+  border-radius: 0.2rem 0.2rem 0 0;
+  filter: grayscale();
+  opacity: 0.7;
+  will-change: filter;
+  transition: all 300ms ease-out;
+}
+
+.card:hover img {
+  filter: none;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition: all 200ms ease-in-out;
+}
+
+.card {
+  transition: all 200ms ease-in-out;
+  background-color: var(--bleached-silk);
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.005rem 1rem var(--shadow-mountain);
+}
+
+.card-name-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-name-links h2 {
+  margin: 0;
+}
+
+.card-links svg {
+  height: 2rem;
+  margin-left: 0.8rem;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+/* FOOTER */
+
+.page-footer {
+  background-color: var(--platinum-granite);
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 5rem;
+}
+
+.page-footer img {
+  height: 40rem;
+  border-radius: 0.2rem;
+}
+
+.page-footer h1 {
+  font-family: "Playfair Display";
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.links-container {
+  display: flex;
+  justify-content: start;
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+.links-container svg {
+  height: 2rem;
+}
+
+/* TO DELETE AFTER */
+
+svg:hover {
+  transition: all 200ms ease-in-out;
+  transform: scale(1.1);
+}
+
+svg {
+  transition: all 200ms ease-in-out;
+  height: 20px;
+}
+
+img {
+  height: 300px;
+}
