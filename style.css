@@ -93,6 +93,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 /* HEADER */
 
 body::before {
@@ -144,7 +149,7 @@ body::before {
 
 .about-me-container {
   background-color: var(--bleached-silk);
-  padding: 1rem;
+  padding: 2rem;
   max-width: 50rem;
   box-shadow: 0rem 0.1rem 1rem var(--shadow-mountain);
 }
@@ -296,6 +301,10 @@ main {
 .footer-right-container img {
   object-fit: cover;
   height: 100%;
+}
+
+.email-link {
+  text-decoration: underline;
 }
 
 /* SVG HOVER TRANSITION */
@@ -450,7 +459,12 @@ svg {
 
   .about-me-container footer {
     justify-content: center;
-    padding-top: 1rem;
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .about-me-container svg {
+    height: 3rem;
   }
 
   main {
@@ -473,15 +487,6 @@ svg {
 
   .links-container {
     justify-content: center;
-  }
-
-  .about-me-container svg {
-    height: 3rem;
-  }
-
-  .about-me-container footer {
-    gap: 2.5rem;
-    padding-top: 2rem;
   }
 }
 
