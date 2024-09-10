@@ -427,6 +427,8 @@ svg {
 
   .card img {
     max-height: 30rem;
+    filter: none;
+    opacity: 1;
   }
 
   .card {
@@ -501,10 +503,5 @@ svg {
 
   .photo-container img {
     height: 35rem;
-  }
-
-  .card img {
-    filter: none;
-    opacity: 1;
   }
 }
