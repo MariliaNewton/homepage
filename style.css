@@ -111,7 +111,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 5rem;
 }
 
 .photo-container {
@@ -191,12 +191,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5rem;
 }
-/* .cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5rem;
-} */
 
 .card img {
   object-fit: cover;
@@ -238,6 +232,10 @@ main {
 
 .card-name-links h2 {
   margin: 0;
+}
+
+.card p {
+  font-size: 1.1rem;
 }
 
 .card-links svg {
@@ -294,7 +292,13 @@ main {
   display: flex;
   align-items: center;
 }
-/* TO DELETE AFTER */
+
+.footer-right-container img {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* SVG HOVER TRANSITION */
 
 svg:hover {
   transition: all 200ms ease-in-out;
@@ -303,17 +307,7 @@ svg:hover {
 
 svg {
   transition: all 200ms ease-in-out;
-  height: 20px;
-  /* fill: rgb(103, 83, 111); */
 }
-
-/* footer {
-  color: var(--bleached-silk);
-}
-
-footer svg {
-  fill: var(--bleached-silk);
-} */
 
 /* CARD ANIMATION  */
 
@@ -387,4 +381,120 @@ footer svg {
   transform: rotateY(180deg);
   filter: invert(0.8);
   animation: rotateReverted 500ms linear forwards;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    max-width: 36rem;
+  }
+
+  .page-footer {
+    gap: 13rem;
+  }
+
+  .page-header {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .photo-container img {
+    height: 40rem;
+  }
+
+  .photo-container h2 {
+    font-size: 3rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    max-height: 30rem;
+  }
+
+  .card {
+    max-width: 60rem;
+  }
+
+  .card-links svg {
+    height: 2.25rem;
+    margin-left: 1.25rem;
+  }
+
+  .page-header,
+  .page-footer {
+    flex-direction: column;
+  }
+
+  .about-me-container {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 12rem 0rem 5rem 0rem;
+  }
+
+  .about-me-container p {
+    font-size: 2rem;
+  }
+
+  .about-me-container h1 {
+    text-align: center;
+  }
+
+  .about-me-container footer {
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  main {
+    padding: 2rem 10rem 5rem 10rem;
+  }
+
+  main h1 {
+    text-align: center;
+  }
+
+  .page-footer {
+    padding: 2rem;
+  }
+
+  .page-footer {
+    text-align: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .links-container {
+    justify-content: center;
+  }
+
+  .about-me-container svg {
+    height: 3rem;
+  }
+
+  .about-me-container footer {
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    padding: 2rem;
+  }
+
+  main {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+
+  .photo-container img {
+    height: 35rem;
+  }
 }
